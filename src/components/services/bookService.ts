@@ -12,6 +12,10 @@ interface IBookUpdate {
   category: string;
   _id: BookIdType;
 }
+export type BookFormValuesType = {
+  name: string;
+  category: string;
+};
 
 axios.defaults.baseURL = "https://my-node-practice.onrender.com/";
 
