@@ -24,8 +24,8 @@ export const getAllBooks = async () => {
   return res.data;
 };
 
-export const createNewBook = async (newBook: IBook) => {
-  const res = await axios.post<IBook>("/books", newBook);
+export const createNewBook = async (data: BookFormValuesType) => {
+  const res = await axios.post<IBook>("/books", data);
   return res.data;
 };
 

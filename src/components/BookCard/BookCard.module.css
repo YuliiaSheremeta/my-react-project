@@ -6,7 +6,9 @@
 
     width: 220px;
 
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -29,4 +31,19 @@
     font-size: 16px;
     font-weight: 400;
     color: #8e44ad;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    fill: #8e44ad;
+    cursor: pointer;
+
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.icon:hover {
+    fill: #732d92;
+    transform: translateY(-2px);
 }
