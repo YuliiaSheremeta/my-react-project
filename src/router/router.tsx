@@ -3,6 +3,7 @@ import MainLayout from "../pages/MainLayout/MainLayout";
 import HomePage from "../pages/HomePage/HomePage";
 import BooksPage from "../pages/BooksPage/BooksPage";
 import AddingFormPage from "../pages/AddingFormPage/AddingFormPage";
+import FilterPage from "../pages/FilterPage/FilterPage";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ export const router = createBrowserRouter([
         element: <BooksPage />,
         children: [{ path: "add", element: <AddingFormPage /> }],
       },
+      { path: "/filter", element: <FilterPage /> },
     ],
   },
 ]);

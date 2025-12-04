@@ -1,5 +1,4 @@
-import BookForm from "../../components/BookForm/BookForm";
-import { useState } from "react";
+import BookAddForm from "../../components/BookAddForm/BookAddForm";
 import { BookFormValuesType } from "../../components/services/bookService";
 import { useNavigate, useOutletContext } from "react-router-dom";
 
@@ -18,7 +17,7 @@ export default function AddingFormPage() {
 
   return (
     <div>
-      <BookForm
+      <BookAddForm
         initialValues={{ name: "", category: "" }}
         onSubmit={handleSubmit}
       />
