@@ -16,7 +16,6 @@ export const router = createBrowserRouter([
         element: <BooksPage />,
         children: [{ path: "add", element: <AddingFormPage /> }],
       },
-      { path: "/filter", element: <FilterPage /> },
     ],
   },
 ]);

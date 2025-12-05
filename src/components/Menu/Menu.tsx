@@ -10,9 +10,6 @@ export default function Menu() {
         <li>
           <Link to={"/books"}>Books</Link>
         </li>
-        <li>
-          <Link to={"/filter"}>Find by category</Link>
-        </li>
       </ul>
     </div>
   );

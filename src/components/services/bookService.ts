@@ -1,4 +1,5 @@
 import axios from "axios";
+import { IoExpandSharp } from "react-icons/io5";
 
 export interface IBook {
   name: string;
@@ -16,12 +17,27 @@ export type BookFormValuesType = {
   name: string;
   category: string;
 };
+export type GetBookParamsType = {
+  page?: number;
+  perPage?: number;
+  category?: string;
+  search?: string;
+};
+export interface IbookResponse {
+  page: number;
+  perPage: number;
+  totalItems: number;
+  totalPages: number;
+  books: IBook[];
+}
 
 axios.defaults.baseURL = "https://my-node-practice.onrender.com/";
 
-export const getAllBooks = async () => {
-  const res = await axios.get<IBook[]>("/books");
-  return res.data;
+export const getAllBooks = async (
+  params: GetBookParamsType = {}
+): Promise<IbookResponse> => {
+  const { data } = await axios.get<IbookResponse>("/books", { params });
+  return data;
 };
 
 export const createNewBook = async (data: BookFormValuesType) => {

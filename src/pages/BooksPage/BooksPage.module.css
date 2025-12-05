@@ -1,11 +1,66 @@
-.icon{
-    width: 50px;
-    height: 50px;
-    fill: #8e44ad;
-    margin: 30px;
-    cursor: pointer;
+.icon {
+  width: 50px;
+  height: 50px;
+  fill: #8e44ad;
+  margin: 30px;
+  cursor: pointer;
 }
-.icon:hover{
-    fill: #732d92;
-    transform: translateY(-2px);
+.icon:hover {
+  fill: #732d92;
+  transform: translateY(-2px);
+}
+.form {
+  max-width: 400px;
+  margin: 20px auto 50px;
+  padding: 24px;
+
+  background: #fff;
+  border-radius: 16px;
+  border: 2px solid #e5e5e5;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.input,
+.select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d1d1;
+
+  font-size: 16px;
+  background: #fafafa;
+
+  transition: 0.2s;
+}
+.input:focus,
+.select:focus {
+  border-color: #8e44ad;
+  box-shadow: 0 0 0 3px rgba(142, 68, 173, 0.15);
+  outline: none;
+}
+.buttonscontainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+.button {
+  background-color: #8e44ad;
+  border: none;
+  border-radius: 30px;
+  color: #fafafa;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background-color: #732d92;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
 }
